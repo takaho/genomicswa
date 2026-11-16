@@ -1,0 +1,91 @@
+openalex_subfield_id,subfield,n_english_speaking_2019_22_intro,n_english_speaking_2019_22_disc,file_stem
+1102,Agronomy and Crop Science,125,113,1102_agronomy-and-crop-science
+1103,Animal Science and Zoology,137,121,1103_animal-science-and-zoology
+1104,Aquatic Science,95,93,1104_aquatic-science
+1105,"Ecology, Evolution, Behavior and Systematics",142,140,1105_ecology-evolution-behavior-and-systematics
+1106,Food Science,72,67,1106_food-science
+1109,Insect Science,130,127,1109_insect-science
+1110,Plant Science,96,92,1110_plant-science
+1111,Soil Science,110,102,1111_soil-science
+1302,Aging,232,229,1302_aging
+1303,Biochemistry,175,188,1303_biochemistry
+1304,Biophysics,210,184,1304_biophysics
+1305,Biotechnology,95,72,1305_biotechnology
+1306,Cancer Research,97,103,1306_cancer-research
+1307,Cell Biology,174,179,1307_cell-biology
+1308,Clinical Biochemistry,179,178,1308_clinical-biochemistry
+1310,Endocrinology,189,199,1310_endocrinology
+1311,Genetics,193,204,1311_genetics
+1312,Molecular Biology,196,195,1312_molecular-biology
+1314,Physiology,168,156,1314_physiology
+1315,Structural Biology,255,212,1315_structural-biology
+2402,Applied Microbiology and Biotechnology,113,91,2402_applied-microbiology-and-biotechnology
+2403,Immunology,194,192,2403_immunology
+2404,Microbiology,155,168,2404_microbiology
+2405,Parasitology,131,131,2405_parasitology
+2406,Virology,229,235,2406_virology
+2703,Anesthesiology and Pain Medicine,100,114,2703_anesthesiology-and-pain-medicine
+2704,Biochemistry (medical),61,52,2704_biochemistry-medical
+2705,Cardiology and Cardiovascular Medicine,113,152,2705_cardiology-and-cardiovascular-medicine
+2706,Critical Care and Intensive Care Medicine,172,201,2706_critical-care-and-intensive-care-medicine
+2707,Complementary and alternative medicine,36,32,2707_complementary-and-alternative-medicine
+2708,Dermatology,92,114,2708_dermatology
+2711,Emergency Medicine,183,203,2711_emergency-medicine
+2712,"Endocrinology, Diabetes and Metabolism",122,133,2712_endocrinology-diabetes-and-metabolism
+2713,Epidemiology,184,213,2713_epidemiology
+2714,Family Practice,219,241,2714_family-practice
+2715,Gastroenterology,135,157,2715_gastroenterology
+2716,Genetics (clinical),182,198,2716_genetics-clinical
+2717,Geriatrics and Gerontology,215,229,2717_geriatrics-and-gerontology
+2718,Health Informatics,225,198,2718_health-informatics
+2720,Hematology,169,175,2720_hematology
+2721,Hepatology,104,127,2721_hepatology
+2723,Immunology and Allergy,147,158,2723_immunology-and-allergy
+2724,Internal Medicine,150,170,2724_internal-medicine
+2725,Infectious Diseases,156,184,2725_infectious-diseases
+2726,Microbiology (medical),113,114,2726_microbiology-medical
+2727,Nephrology,88,108,2727_nephrology
+2728,Clinical Neurology,183,209,2728_clinical-neurology
+2729,Obstetrics and Gynecology,154,166,2729_obstetrics-and-gynecology
+2730,Oncology,148,167,2730_oncology
+2731,Ophthalmology,140,174,2731_ophthalmology
+2732,Orthopedics and Sports Medicine,137,149,2732_orthopedics-and-sports-medicine
+2733,Otorhinolaryngology,109,127,2733_otorhinolaryngology
+2734,Pathology and Forensic Medicine,148,160,2734_pathology-and-forensic-medicine
+2735,"Pediatrics, Perinatology and Child Health",187,209,2735_pediatrics-perinatology-and-child-health
+2736,Pharmacology (medical),162,172,2736_pharmacology-medical
+2737,Physiology (medical),182,184,2737_physiology-medical
+2738,Psychiatry and Mental health,206,226,2738_psychiatry-and-mental-health
+2739,"Public Health, Environmental and Occupational Health",239,258,2739_public-health-environmental-and-occupational-health
+2740,Pulmonary and Respiratory Medicine,149,166,2740_pulmonary-and-respiratory-medicine
+2741,"Radiology, Nuclear Medicine and Imaging",207,213,2741_radiology-nuclear-medicine-and-imaging
+2742,Rehabilitation,192,210,2742_rehabilitation
+2743,Reproductive Medicine,73,79,2743_reproductive-medicine
+2745,Rheumatology,156,176,2745_rheumatology
+2746,Surgery,142,167,2746_surgery
+2747,Transplantation,170,204,2747_transplantation
+2748,Urology,144,156,2748_urology
+2802,Behavioral Neuroscience,262,298,2802_behavioral-neuroscience
+2804,Cellular and Molecular Neuroscience,253,254,2804_cellular-and-molecular-neuroscience
+2805,Cognitive Neuroscience,233,260,2805_cognitive-neuroscience
+2806,Developmental Neuroscience,172,178,2806_developmental-neuroscience
+2807,Endocrine and Autonomic Systems,256,270,2807_endocrine-and-autonomic-systems
+2808,Neurology,186,185,2808_neurology
+2809,Sensory Systems,193,201,2809_sensory-systems
+2916,Nutrition and Dietetics,174,181,2916_nutrition-and-dietetics
+2922,Research and Theory,137,161,2922_research-and-theory
+3002,Drug Discovery,92,79,3002_drug-discovery
+3003,Pharmaceutical Science,114,84,3003_pharmaceutical-science
+3004,Pharmacology,90,99,3004_pharmacology
+3005,Toxicology,145,143,3005_toxicology
+3404,Small Animals,197,199,3404_small-animals
+3500,General Dentistry,79,81,3500_general-dentistry
+3504,Oral Surgery,60,63,3504_oral-surgery
+3505,Orthodontics,55,56,3505_orthodontics
+3506,Periodontics,103,103,3506_periodontics
+3600,General Health Professions,264,275,3600_general-health-professions
+3605,Health Information Management,242,251,3605_health-information-management
+3607,Medical Laboratory Technology,140,140,3607_medical-laboratory-technology
+3611,Pharmacy,196,201,3611_pharmacy
+3612,"Physical Therapy, Sports Therapy and Rehabilitation",182,200,3612_physical-therapy-sports-therapy-and-rehabilitation
+3616,Speech and Hearing,230,247,3616_speech-and-hearing

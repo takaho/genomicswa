@@ -1,0 +1,44 @@
+# Complementary and alternative medicine: research-article prose style, 2024–2025
+
+Use this to rewrite Introduction or Discussion prose so that it reads like a Complementary and alternative medicine article of 2024–2025. Change style only: never change numbers, statistics, citations, abbreviations, technical terms, claims or the subject matter.
+
+Evidence: open-access Complementary and alternative medicine articles (2024–2025) compared with 90 life-science fields. Targets are this field's averages; "all fields" gives the cross-field average.
+
+## General rules (learned from earlier rewriting runs)
+- Change only the features listed below, in the direction and by the amount shown. Leave everything else as in the original.
+- For features marked "Apply in several places", earlier rewrites changed too little: count the feature in the original and change it throughout the excerpt, not just once.
+- Do not shorten sentences, split sentences, or turn passive clauses into active ones unless a target below asks for it; otherwise keep the original sentence length and voice.
+- Do not change who or what the sentences are about (patients, animals, plants, methods): that follows from the subject matter.
+- Do not add aims, limitations, novelty claims or future-work statements that the original does not contain.
+
+## Introduction: what to change (most important first)
+
+- **Word length: more than other fields** — target about 5.91 characters per word (all fields about 5.81 characters per word). How: prefer precise technical and Latinate terms and noun phrases. Example: "X goes up when Y is blocked" → "X increases upon inhibition of Y". Apply in several places.
+- **Sentence length: less than other fields** — target about 24 words per sentence (all fields about 25 words per sentence). How: split long sentences; one idea per sentence. Example: "X, which was measured in all samples and which increased with age, was associated with Y." → "X was measured in all samples. It increased with age and was associated with Y.". Apply in several places.
+- **Modal hedges: less than other fields** — target about 0.7 per 300 words (all fields about 0.9 per 300 words). How: use fewer of: may, might, could, would. Example: "X may explain Y" → "X explains Y" (only where the excerpt states it as a finding). Apply in several places.
+- **Booster verbs: more than other fields** — target about 1.4 per 300 words (all fields about 1.1 per 300 words). How: use more of: show, demonstrate, reveal, confirm, establish, highlight. Example: "We found that X…" → "We show that X…". Apply in several places.
+
+Typical introduction phrasing in Complementary and alternative medicine (use where it fits): "It is …"; "Therefore it …"; "Furthermore the …"; "Studies have …"; "In recent …"; "Previous studies …"
+
+## Discussion: what to change (most important first)
+
+- **Contrast connectives: less than other fields** — target about 0.9 per 300 words (all fields about 1.3 per 300 words). How: use fewer of: however, although, whereas, in contrast, nevertheless, despite.
+- **Booster verbs: more than other fields** — target about 2.2 per 300 words (all fields about 1.9 per 300 words). How: use more of: show, demonstrate, reveal, confirm, establish, highlight.
+- **Hedging adverbs: less than other fields** — target about 0.7 per 300 words (all fields about 1.0 per 300 words). How: use fewer of: likely, possibly, probably, potentially, generally, relatively, largely, often.
+- **Findings/data/study as subject: more than other fields** — target about 1.5 in 10 clause subjects (all fields about 1.3 in 10 clause subjects). How: make findings/data/results/this study the subject ("These findings suggest…").
+- **Word length: more than other fields** — target about 5.77 characters per word (all fields about 5.68 characters per word). How: prefer precise technical and Latinate terms and noun phrases. Example: "X goes up when Y is blocked" → "X increases upon inhibition of Y". Apply in several places.
+- **Modal hedges: less than other fields** — target about 1.7 per 300 words (all fields about 2.0 per 300 words). How: use fewer of: may, might, could, would. Example: "X may explain Y" → "X explains Y" (only where the excerpt states it as a finding). Apply in several places.
+
+Typical discussion phrasing in Complementary and alternative medicine (use where it fits): "The results …"; "To further …"; "Studies have …"; "It can …"; "The findings …"; "It was …"; "…effects in the…"
+
+## Vocabulary
+- Words often added by AI polishing (additionally, crucial, enhance, notably, comprehensive, enhancing, insights, enhances, elucidate, robust) occur about 1.0 times per 300 words in Complementary and alternative medicine; do not exceed that, and do not add them where the original has none.
+
+## Style illustration (Complementary and alternative medicine, 2024–2025; verbatim, CC BY; do not copy content)
+- Introduction (PMC11990370, Plants, 2025): "Nettles have a long history of traditional use and are of particular interest at present, with studies focusing on their medicinal benefits and uses in the cosmetic and food industries. As the pharmaceutical and cosmetic industries continue to advance, there is a growing research interest in potential pharmacological applications of nettle extracts, their biological effects, and the refinement of extraction methods."
+- Discussion (PMC10978583, Frontiers in Molecular Biosciences, 2024): "In this study, we assessed the metabolic characteristics of a rat model of BDS and examined the effects of DBD using a nonspecific metabolomics methodology. Serum and urine metabolomics revealed 14 serum and 39 urine metabolites with altered expression levels that were primarily involved in amino acid, carbohydrate, and lipid metabolism. According to our results, the mechanism of DBD treatment was linked to 36 significant alterations in biomarkers (9 serum and 27 urine) and 11 related metabolic pathways in the BDS model."
+
+## Procedure
+1. For each feature listed for this section, note how the original compares with the target.
+2. Rewrite sentence by sentence, applying only the listed changes; keep sentence length and voice unless listed.
+3. Check: every number, [REF] marker, abbreviation and technical term is still present; no claim added or removed; listed features moved toward (not beyond) their targets.

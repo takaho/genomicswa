@@ -1,0 +1,22 @@
+,0
+PLAIN|too many words changed,49
+TONE|too many words changed,45
+PLAIN|coverage/ref/lead,20
+MERGE_S4|hedging changed,5
+MERGE_S4|coverage/ref/lead,22
+TONE|coverage/ref/lead,7
+TONE|new connective: because,1
+PAST|too many words changed,7
+PLAIN|hedging changed,10
+PLAIN|new connective: because,1
+TONE|negation changed,5
+PASSIVE|coverage/ref/lead,7
+MERGE_S4|new connective: due to,1
+SUBJECT_WE|no 'we' subject,1
+PAST|coverage/ref/lead,2
+PLAIN|negation changed,2
+PLAIN|new connective: while,1
+TONE|new connective: thereby,1
+PLAIN|new connective: leading to,1
+PLAIN|new connective: due to,3
+PLAIN|new connective: in contrast,1
