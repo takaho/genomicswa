@@ -1,4 +1,4 @@
-# genomicswa — field-style SKILL files and tools for life-science prose
+# Life Science Manuscript Skills — field-style SKILL files and tools for life-science prose
 
 This repository holds **SKILL.md files** that describe how research articles in 90 life- and health-science fields are written. It also holds the **tools** used to build and test them.
 
