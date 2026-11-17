@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style map — compare versions of a scientific text</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Style map</h1>
+    <p class="lead">Compare versions of a scientific paragraph — for example before and after applying a
+      <a href="https://github.com/takaho/genomicswa/tree/main/skills">SKILL.md</a> — and see how their position changes among
+      published life-science papers of a chosen field.</p>
+    <p class="note">Everything runs in your browser. Your text is not sent anywhere. This is a descriptive tool: it shows positions
+      relative to published papers; it does not identify fields, authors, countries or the use of AI, and it makes no claim of accuracy.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="panel" id="setup">
+    <div class="row">
+      <label>Field
+        <input id="field" list="fieldlist" placeholder="type to search, e.g. Immunology" autocomplete="off">
+        <datalist id="fieldlist"></datalist>
+      </label>
+      <label>Section
+        <select id="section"><option value="introduction">Introduction</option><option value="discussion" selected>Discussion</option></select>
+      </label>
+      <label>Reference papers
+        <select id="group">
+          <option value="pre_en" selected>2019–22, English-speaking last author</option>
+          <option value="pre">2019–22, all authors</option>
+          <option value="post">2024–25, all authors</option>
+        </select>
+      </label>
+      <label>Example
+        <select id="example"><option value="">— load an example —</option></select>
+      </label>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div id="slots"></div>
+    <div class="row buttons">
+      <button id="add">+ Add a version</button>
+      <button id="run" class="primary">Map these texts</button>
+      <span id="status"></span>
+    </div>
+  </section>
+
+  <section id="results" hidden>
+    <div class="panel">
+      <h2>Summary</h2>
+      <div id="summary"></div>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <h2>Style map of 90 fields <span class="hint">(2019–22 field medians, principal components)</span></h2>
+        <div id="map"></div>
+        <p class="caption" id="mapcap"></p>
+      </div>
+      <div class="panel">
+        <h2>Two directions <span class="hint">(relative to the chosen field)</span></h2>
+        <div id="axes"></div>
+        <p class="caption">Horizontal: the average change of life-science prose from 2019–22 (0) to 2024–25 (1).
+          Vertical: the average difference between papers whose last author worked in an English-speaking country (1) and other papers (0),
+          within fields, 2019–22. Grey labels are average positions of papers from each region (2019–22). Directions, not judgements.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Feature by feature <span class="hint">(band = middle 50% of the reference papers, line = 5–95%; ◆ = average of the field's English-speaking authors, 2019–22 — the SKILL d3 target)</span></h2>
+      <div id="strips"></div>
+    </div>
+    <div class="panel">
+      <h2>What changed between versions</h2>
+      <div id="changes"></div>
+    </div>
+    <div class="panel">
+      <h2>Marked text</h2>
+      <div class="legend" id="legend"></div>
+      <div id="marked"></div>
+    </div>
+    <div class="panel row buttons">
+      <button id="dlJson">Download results (JSON)</button>
+      <button id="dlSvg">Download plots (SVG)</button>
+    </div>
+  </section>
+
+  <section class="panel about">
+    <details>
+      <summary>About this tool</summary>
+      <div id="about">
+        <p><b>What it measures.</b> 28 syntactic and rhetorical features per text: sentence and word length, lexical diversity (MATTR),
+          what the clause subjects are (we, data/findings, methods, patients, organisms, genes/cells/molecules, pronouns, "It is/There are"),
+          passive voice, hedges and boosters, past tense, rhetorical moves (aim, novelty, importance, limitation, future work), connectives and nominalisations.
+          Rates are per 1,000 words; subject types and passive voice are shares of clauses.</p>
+        <p><b>Reference.</b> 53,959 introduction and discussion sections of PubMed Central open-access research articles from 90 OpenAlex
+          life- and health-science subfields (about 150 per field, period and section; 2019–22 and 2024–25), measured with exactly the same code
+          as your text. The style map is a principal-component analysis of the 90 fields' 2019–22 medians. The two directions are average
+          differences in standardised feature space, within fields.</p>
+        <p><b>How the features are computed.</b> In the browser with <a href="https://winkjs.org/wink-nlp/">wink-nlp</a> (tokens, parts of speech, lemmas)
+          and word lists. Clause subjects, passive voice and tense are approximated with part-of-speech patterns. Agreement with the spaCy-based
+          features of the research corpus (Pearson r on 14,400 sections) is listed below; features marked * (r &lt; 0.7) are shown but not used for the map.</p>
+        <div id="agreement"></div>
+        <p><b>Limits.</b> Short texts (&lt; 300 words) give unstable values. Positions describe how typical the prose is; they say nothing about quality,
+          correctness or who wrote it. The region labels are averages of many papers and must not be read as statements about any author.</p>
+        <p><b>Source.</b> Endo T. Disciplinary prose styles in the life sciences (manuscript in preparation, 2026).
+          Code, SKILL files and data: <a href="https://github.com/takaho/genomicswa">github.com/takaho/genomicswa</a> (code MIT, SKILL files CC BY 4.0).
+          Example texts are CC BY articles cited by PMCID.</p>
+      </div>
+    </details>
+  </section>
+</main>
+<footer class="wrap">Style map · genomicswa · runs locally in your browser</footer>
+<script src="lib/stylemap-nlp.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

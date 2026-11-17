@@ -19,17 +19,22 @@ skills/
   fields_2024-25_r2/          90 SKILL.md files: current (2024–25) style of each field  ← recommended
   fields_2024-25_r1/          round-1 versions (kept for comparison; tend to overshoot)
   fields_2019-22_de-llm_d2/   90 SKILL.md files: 2019–22 (pre-LLM) style + "remove AI-polishing" rules
+  fields_2019-22_english-speaking_d3/   90 SKILL.md files: 2019–22 style of papers with an English-speaking last
+                              author + meaning guards (no new connectives, hedges/negations unchanged)  ← recommended for de-LLM
   pilot_immunology/           hand-written pilot SKILLs for Immunology (pre- and post-LLM)
+examples/                     three published paragraphs rewritten with d3 SKILLs, with stylecheck plots
   FIELDS.csv                  OpenAlex subfield id, name, file stem, number of English-speaking-author papers
 tools/
+  stylecheck.py               where does MY text sit among published papers of my field? (spaCy; runs locally)
   fieldstyle.py               build digests, sample excerpts, rewrite with a SKILL via LM Studio (local LLM)
   fieldstyle_struct.py        meaning-preserving structural editor (arm s4; earlier arms s3a/s3b)
   features_wide.py            36 syntactic/rhetorical features (spaCy en_core_web_sm)
   rewrite_eval.py             preservation checks (numbers, citations, abbreviations), LLM-marker counts
   llm_probe.py                LM Studio helper (server detection; default port 1235)
-  skill_corpus.py, generate_skill.py, fs_skill.py, fs_skill2.py   SKILL generation
+  skill_corpus.py, generate_skill.py, fs_skill.py, fs_skill2.py, fs_skill3.py (d3)   SKILL generation
   fs_build_en.py, fs_eval2.py, fs_s4analysis.py                   targets and evaluation
 data/
+  style_reference.json        5/25/50/75/95% quantiles of 28 features per field × section × group (2019–22, 2019–22 English-speaking, 2024–25)
   profiles.json               per-field 2024–25 feature means (introduction/discussion)
   profiles_pre.json           per-field 2019–22 means (all authors)
   profiles_pre_en.json        per-field 2019–22 means of papers with an English-speaking last author (shrunk, k = 50)
@@ -43,6 +48,21 @@ results/                      small summary tables (see "Findings")
 The corpus itself (full texts) is **not** redistributed. The analysis scripts in `tools/` expect a local corpus at `../PubMedCorpus/`; they are included for transparency.
 
 ---
+
+## Style map (web app)
+
+**https://takaho.github.io/genomicswa/**. The app runs entirely in your browser, and your text is not sent anywhere.
+
+Paste two to five versions of a paragraph, for example the original, an LLM-polished version and a version rewritten with a SKILL.md. Choose the field and section. The app then shows:
+
+- where each version sits on a map of 90 life-science fields (principal components of the fields' 2019–22 medians)
+- how each version moves along two directions: the average change from 2019–22 to 2024–25 prose, and the average difference between English-speaking and other authors
+- feature-by-feature percentiles among published papers of the field, with the SKILL d3 targets marked
+- which features changed between versions
+- a check for added connectives or changed hedges, negations, citations and numbers
+- the marked text
+
+Features are computed with wink-nlp and word lists, which approximate the spaCy features of the study. Agreement is r ≥ 0.86 for 20 of the 28 features; it is 0.74–0.79 for sentence length and most subject types, and lower for pronoun and "It is…" subjects, which are therefore left off the map. See the About section of the app. The app describes position; it does not identify fields, authors, countries or AI use. Build scripts are in `tools/webapp/`.
 
 ## Using a SKILL.md
 
@@ -84,11 +104,38 @@ python3 tools/fieldstyle_struct.py demo --arm s4 --fields 2403   # show plan and
 python3 tools/fieldstyle_struct.py run  --arm s4 --n 2 --temperature 0.7
 ```
 
+**Check your own text (`stylecheck.py`).** Computes the 28 features of a section and places it within the published papers of your field and section (default: 2019–22 papers with an English-speaking last author). It reports percentiles, features outside the 5–95% range, the LLM-style index, P(pre-2023 style), P(English-speaking author), the closest fields and AI-polish words. With `--compare` and `--plot` it draws before/after positions.
+
+```bash
+pip install spacy numpy matplotlib && python -m spacy download en_core_web_sm
+python3 tools/stylecheck.py --list-fields | grep -i immun
+python3 tools/stylecheck.py my_discussion.txt --field 2403 --section discussion --plot me.png
+python3 tools/stylecheck.py before.txt --compare after.txt --field 1305 --section introduction --core --plot compare.png
+```
+
+Use whole sections (≥ 300 words) where possible: the reference distributions are of whole sections, so short excerpts look more extreme. The tool describes how typical your prose is; it does not judge quality.
+
+See `examples/` for three published paragraphs rewritten with `fields_2019-22_english-speaking_d3` SKILLs and checked with stylecheck.
+
 **Recommended use:** SKILL.md for the lexical layer and for agency ("we"), then structural edits offered as *suggestions* that the author accepts or rejects. Do not apply any automatic rewrite to a manuscript without reading it.
 
 ---
 
 ## What the study found (working draft)
+
+**Background.** LLM-assisted writing has been estimated as follows:
+
+- **Science**
+  - ≥ 13.5% of 2024 PubMed abstracts, from excess vocabulary (Kobak et al., *Sci. Adv.* 2025).
+  - Up to 17.5% of computer-science papers, using a distributional method (Liang et al. 2024).
+  - 6.5–16.9% of AI-conference peer reviews (Liang et al., ICML 2024).
+- **Beyond science** (Liang et al., *Patterns* 2025)
+  - ~18% of US consumer complaints
+  - ~24% of corporate press releases
+  - ~14% of UN press releases
+  - ~10% of small-firm job postings
+
+Grammatical studies report more nominalisation and participial clauses and fewer agentless passives in LLM text (Reinhart et al., *PNAS* 2025). Every component of our LLM-style index was reported before, except the fall in causal connectives.
 
 **Corpus and features**
 

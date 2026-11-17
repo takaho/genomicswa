@@ -1,0 +1,57 @@
+:root { --ink:#1B2433; --navy:#1F3A5F; --teal:#1B7F79; --amber:#E0A100; --brick:#C8553D; --slate:#5B6C8F; --tint:#EEF3F2; --grid:#D9DEE3; --muted:#6B7480; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: Calibri, "Segoe UI", Arial, sans-serif; color: var(--ink); background:#fff; font-size:15px; line-height:1.45; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+header { background: var(--navy); color:#fff; padding: 22px 0 16px; }
+header h1 { font-family: Cambria, Georgia, serif; margin:0 0 6px; font-size: 30px; }
+header a { color: #ffd76a; }
+.lead { margin: 0 0 6px; font-size: 17px; }
+.note { margin: 0; font-size: 14px; opacity: .85; }
+.panel { background: var(--tint); border-radius: 10px; padding: 14px 18px; margin: 16px 0; }
+h2 { font-family: Cambria, Georgia, serif; color: var(--navy); font-size: 20px; margin: 0 0 10px; }
+.hint { font-family: Calibri, Arial, sans-serif; font-size: 13px; color: var(--muted); font-weight: normal; }
+.row { display:flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
+label { display:flex; flex-direction: column; font-size: 13px; color: var(--muted); gap: 4px; }
+input, select, textarea { font: inherit; color: var(--ink); border: 1px solid #c4ccd2; border-radius: 6px; padding: 6px 8px; background:#fff; }
+#field { width: 360px; }
+.buttons { margin-top: 8px; align-items: center; }
+button { font: inherit; border: 1px solid var(--navy); color: var(--navy); background: #fff; border-radius: 6px; padding: 7px 14px; cursor: pointer; }
+button.primary { background: var(--navy); color: #fff; }
+button:disabled { opacity: .5; cursor: default; }
+#status { color: var(--muted); font-size: 14px; }
+.slot { background:#fff; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; border-left: 0; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+.slot .head { display:flex; gap: 10px; align-items: center; margin-bottom: 6px; }
+.slot .dot { width: 14px; height: 14px; border-radius: 50%; flex: none; }
+.slot .name { width: 300px; font-weight: bold; }
+.slot textarea { width: 100%; min-height: 120px; resize: vertical; font-family: Cambria, Georgia, serif; font-size: 14px; }
+.slot .meta { font-size: 12px; color: var(--muted); margin-left: auto; }
+.slot .meta.warn { color: var(--brick); }
+.slot .rm { border-color: #c4ccd2; color: var(--muted); padding: 2px 8px; }
+.grid2 { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid2 .panel { margin: 0; }
+@media (max-width: 960px) { .grid2 { grid-template-columns: 1fr; } }
+.caption { font-size: 13px; color: var(--muted); margin: 6px 0 0; }
+svg text { font-family: Calibri, Arial, sans-serif; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; background: #fff; }
+th, td { padding: 5px 8px; border-bottom: 1px solid var(--grid); text-align: left; vertical-align: top; }
+th { color: var(--navy); }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.closer { color: var(--teal); font-weight: bold; }
+.farther { color: var(--brick); font-weight: bold; }
+.warnbox { background: #fff4e5; border-radius: 6px; padding: 8px 12px; margin: 8px 0; font-size: 14px; }
+.okbox { background: #e9f5f3; border-radius: 6px; padding: 8px 12px; margin: 8px 0; font-size: 14px; }
+.legend span { display:inline-block; margin: 0 10px 6px 0; font-size: 13px; padding: 1px 6px; border-radius: 4px; }
+.marked { background:#fff; border-radius: 8px; padding: 10px 14px; margin-bottom: 10px; font-family: Cambria, Georgia, serif; font-size: 14px; line-height: 1.6; white-space: pre-wrap; }
+.marked h3 { font-family: Calibri, Arial, sans-serif; font-size: 15px; margin: 0 0 6px; }
+mark { border-radius: 3px; padding: 0 1px; }
+.m-marker { background: #f6c7bd; } .m-importance { background: #fbe3a6; } .m-causal { background: #cfe3f7; } .m-contrast { background: #d9d2ef; }
+.m-additive { background: #e3e8ee; } .m-hedge { background: #d4ecd2; } .m-negation { background: #f2d0e0; } .m-passive { text-decoration: underline wavy #5B6C8F; background: none; }
+.m-study_subject { background: #ffd9a8; } .m-we { background: #c7ebe7; }
+.summary-cards { display:flex; flex-wrap: wrap; gap: 12px; }
+.card { background:#fff; border-radius: 8px; padding: 10px 14px; min-width: 210px; }
+.card .t { font-weight: bold; display:flex; gap:8px; align-items:center; }
+.card .v { font-size: 13px; color: var(--muted); }
+.card .v b { color: var(--ink); font-size: 15px; }
+.about { font-size: 14px; }
+.about summary { cursor: pointer; font-family: Cambria, Georgia, serif; color: var(--navy); font-size: 18px; }
+footer { color: var(--muted); font-size: 12px; padding: 20px; }
